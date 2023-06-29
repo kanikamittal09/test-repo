@@ -20,3 +20,6 @@ template:
                 - name: s1
                   type: String
                   value: valueFromPipelinetemplate
+                - name: s2
+                  type: String
+                  value: <+input>
