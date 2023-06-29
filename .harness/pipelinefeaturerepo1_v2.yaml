@@ -19,7 +19,7 @@ template:
               variables:
                 - name: s1
                   type: String
-                  value: valueFromPipelinetemplate
+                  value: <+input>
                 - name: s2
                   type: String
                   value: <+input>
