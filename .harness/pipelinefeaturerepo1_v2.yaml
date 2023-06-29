@@ -1,0 +1,22 @@
+template:
+  name: pipeline-feature-repo1
+  identifier: pipelinefeaturerepo1
+  versionLabel: v2
+  type: Pipeline
+  projectIdentifier: kanikatest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: p1
+          identifier: p1
+          template:
+            templateRef: defaultwfsa
+            versionLabel: v2
+            templateInputs:
+              type: Custom
+              variables:
+                - name: s1
+                  type: String
+                  value: valueFromPipelinetemplate
