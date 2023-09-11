@@ -1,0 +1,46 @@
+inputSet:
+  name: inputset1
+  identifier: inputset1
+  orgIdentifier: default
+  projectIdentifier: test
+  pipeline:
+    identifier: parentgit
+    stages:
+      - stage:
+          identifier: sv1
+          type: Deployment
+          spec:
+            service:
+              serviceRef: fgf
+              serviceInputs:
+                serviceDefinition:
+                  type: Kubernetes
+                  spec:
+                    artifacts:
+                      primary:
+                        primaryArtifactRef: dg
+                        sources:
+                          - identifier: dg
+                            type: DockerRegistry
+                            spec:
+                              tag: s1
+            environment:
+              environmentRef: df
+      - stage:
+          identifier: svc2
+          type: Deployment
+          spec:
+            service:
+              serviceInputs:
+                serviceDefinition:
+                  type: Kubernetes
+                  spec:
+                    artifacts:
+                      primary:
+                        sources:
+                          - identifier: dg
+                            type: DockerRegistry
+                            spec:
+                              tag: s2
+            environment:
+              infrastructureDefinitions: <+input>
