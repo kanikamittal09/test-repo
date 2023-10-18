@@ -1,0 +1,8 @@
+harnessApiVersion: '1.0'
+type: APPLICATION
+areWebHookSecretsMandated: false
+branchName: kanikamittal09-patch-1
+disableTriggers: false
+gitConnector: kanika-github
+isGitSyncEnabled: true
+isManualTriggerAuthorized: false
