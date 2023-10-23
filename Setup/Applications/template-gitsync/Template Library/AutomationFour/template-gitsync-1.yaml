@@ -2,4 +2,4 @@ harnessApiVersion: '1.0'
 type: SHELL_SCRIPT
 scriptString: echo hello
 scriptType: BASH
-timeoutMillis: 1800000
+timeoutMillis: 600000
