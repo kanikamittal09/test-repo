@@ -1,0 +1,5 @@
+service:
+  name: bvnv
+  identifier: bvnv
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
