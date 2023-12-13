@@ -3,3 +3,21 @@ service:
   identifier: dfg
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: <+input>
+                repository: <+input>
+                repositoryFormat: docker
+                tag: <+input>
+                digest: <+input>
+                spec:
+                  artifactPath: <+input>
+                  repositoryUrl: <+input>
+              identifier: dfs
+              type: Nexus3Registry
+    type: Kubernetes
