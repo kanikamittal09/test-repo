@@ -3,3 +3,19 @@ service:
   identifier: sdfg555
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: sfgs
+              identifier: sfgs
+              template:
+                templateRef: Ecr_t_5
+                versionLabel: v1
+                templateInputs:
+                  type: Ecr
+                  spec:
+                    tag: <+input>
+    type: Kubernetes
