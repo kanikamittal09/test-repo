@@ -1,0 +1,5 @@
+service:
+  name: dfg
+  identifier: dfg
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
