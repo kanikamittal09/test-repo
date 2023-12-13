@@ -1,0 +1,5 @@
+service:
+  name: sdfg555
+  identifier: sdfg555
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
