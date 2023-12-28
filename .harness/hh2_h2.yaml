@@ -1,0 +1,28 @@
+template:
+  name: hh2
+  identifier: hh2
+  versionLabel: h2
+  type: Stage
+  projectIdentifier: dda
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: hstep
+              identifier: hstep
+              template:
+                templateRef: hh
+                versionLabel: h3
+                gitBranch: main
+                templateInputs:
+                  type: JenkinsBuild
+                  spec:
+                    connectorRef: <+input>
+                    consoleLogPollFrequency: <+input>
+                    jobName: <+input>
+                    jobParameter: <+input>
+                  timeout: <+input>
