@@ -1,0 +1,26 @@
+template:
+  name: stage2a
+  identifier: stage2a
+  versionLabel: stage2a
+  type: Stage
+  projectIdentifier: dda
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: step2
+              identifier: step2
+              template:
+                templateRef: script
+                versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    executionTarget:
+                      host: <+input>
+                      connectorRef: <+input>
+                      workingDirectory: <+input>
