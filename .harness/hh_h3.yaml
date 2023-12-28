@@ -1,0 +1,18 @@
+template:
+  name: hh
+  identifier: hh
+  versionLabel: h3
+  type: Step
+  projectIdentifier: dda
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: JenkinsBuild
+    spec:
+      connectorRef: <+input>
+      consoleLogPollFrequency: <+input>
+      jobName: <+input>
+      jobParameter: <+input>
+      unstableStatusAsSuccess: false
+      useConnectorUrlForJobExecution: false
+    timeout: <+input>
