@@ -28,4 +28,3 @@ pipeline:
                             consoleLogPollFrequency: <+input>
                             jobName: <+input>
                             jobParameter: <+input>
-                          timeout: <+input>
