@@ -1,0 +1,31 @@
+pipeline:
+  name: remotepipeline
+  identifier: remotepipeline
+  projectIdentifier: dda
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s2
+        identifier: s2
+        tags: {}
+        template:
+          templateRef: hh2
+          versionLabel: h2
+          gitBranch: main_old
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: hstep
+                      template:
+                        templateInputs:
+                          type: JenkinsBuild
+                          spec:
+                            connectorRef: <+input>
+                            consoleLogPollFrequency: <+input>
+                            jobName: <+input>
+                            jobParameter: <+input>
+                          timeout: <+input>
