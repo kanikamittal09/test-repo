@@ -25,4 +25,4 @@ template:
                     consoleLogPollFrequency: <+input>
                     jobName: <+input>
                     jobParameter: <+input>
-                  timeout: <+input>
+                  timeout: 10m
