@@ -28,3 +28,31 @@ pipeline:
                             consoleLogPollFrequency: <+input>
                             jobName: <+input>
                             jobParameter: <+input>
+    - stage:
+        name: s3
+        identifier: s3
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - stepGroup:
+                  name: d3
+                  identifier: d3
+                  template:
+                    templateRef: stepgroup3
+                    versionLabel: v1
+                    gitBranch: kanikamittal09-patch-3
+                    templateInputs:
+                      steps:
+                        - step:
+                            identifier: s3
+                            template:
+                              templateInputs:
+                                type: ShellScript
+                                spec:
+                                  executionTarget:
+                                    host: <+input>
+                                    connectorRef: <+input>
+                                    workingDirectory: <+input>
+        tags: {}
