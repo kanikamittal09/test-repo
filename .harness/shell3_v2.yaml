@@ -1,0 +1,24 @@
+template:
+  name: shell3
+  identifier: shell3
+  versionLabel: v2
+  type: Step
+  projectIdentifier: kanikaTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget:
+        host: <+input>
+        connectorRef: <+input>
+        workingDirectory: <+input>
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 1
+      environmentVariables: []
+      outputVariables: []
