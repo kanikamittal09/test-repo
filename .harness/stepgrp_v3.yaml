@@ -1,0 +1,25 @@
+template:
+  name: stepgrp
+  identifier: stepgrp
+  versionLabel: v3
+  type: StepGroup
+  projectIdentifier: kanikaTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Custom
+    steps:
+      - step:
+          name: step5
+          identifier: step5
+          template:
+            templateRef: shell3
+            versionLabel: v2
+            gitBranch: main_old
+            templateInputs:
+              type: ShellScript
+              spec:
+                executionTarget:
+                  host: <+input>
+                  connectorRef: <+input>
+                  workingDirectory: <+input>
