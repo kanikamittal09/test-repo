@@ -3,3 +3,17 @@ service:
   identifier: dockerremote
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: account.CDCNG_Docker_h8VJw3xmCn
+                imagePath: <+input>
+                tag: <+input>
+                digest: ""
+              identifier: doc
+              type: DockerRegistry
+    type: Kubernetes
