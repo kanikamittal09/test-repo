@@ -12,21 +12,6 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          service:
-            serviceRef: dockerremote
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: doc
-                      sources:
-                        - identifier: doc
-                          type: DockerRegistry
-                          spec:
-                            imagePath: library/nginx
-                            tag: <+input>
           environment:
             environmentRef: <+input>
             deployToAll: false
@@ -51,6 +36,82 @@ pipeline:
                   timeout: 10m
                   spec:
                     pruningEnabled: false
+          services:
+            values:
+              - serviceRef: dockerremote
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: doc
+                          sources:
+                            - identifier: doc
+                              type: DockerRegistry
+                              spec:
+                                imagePath: library/nginx
+                                tag: <+input>
+              - serviceRef: docker2
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          type: DockerRegistry
+                          spec:
+                            connectorRef: <+input>
+                            imagePath: <+input>
+                            tag: <+input>
+                            digest: <+input>
+              - serviceRef: dockereexp
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          type: DockerRegistry
+                          spec:
+                            imagePath: <+input>
+                            tag: <+input>
+              - serviceRef: custom
+              - serviceRef: org.vivektestservice
+              - serviceRef: org.svc
+              - serviceRef: account.TestingCDCupdated
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: <+input>
+                          sources: <+input>
+              - serviceRef: account.accser
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: <+input>
+                          sources: <+input>
+                      variables:
+                        - name: var1
+                          type: String
+                          value: <+input>
+              - serviceRef: account.svc1
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: <+input>
+                          sources: <+input>
+            metadata:
+              parallel: false
         tags: {}
         failureStrategies:
           - onFailure:
