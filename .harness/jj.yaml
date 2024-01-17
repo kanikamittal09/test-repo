@@ -1,0 +1,29 @@
+inputSet:
+  name: jj
+  identifier: jj
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
+  pipeline:
+    identifier: stagestrigger_Clone
+    stages:
+      - stage:
+          identifier: cs1
+          type: Custom
+          variables:
+            - name: stage1
+              type: String
+              value: a
+      - stage:
+          identifier: cs3
+          type: Custom
+          variables:
+            - name: stage2
+              type: String
+              value: b
+      - stage:
+          identifier: cs2
+          type: Custom
+          variables:
+            - name: stage3
+              type: String
+              value: c
