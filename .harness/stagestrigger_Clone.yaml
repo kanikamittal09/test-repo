@@ -1,0 +1,96 @@
+---
+pipeline:
+  projectIdentifier: "kanikaTest"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "cs1"
+      identifier: "cs1"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                executionTarget: {}
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "echo 1"
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+      tags: {}
+      variables:
+      - name: "stage1"
+        type: "String"
+        description: ""
+        required: false
+        value: "<+input>"
+  - stage:
+      name: "cs3"
+      identifier: "cs3"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                executionTarget: {}
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "echo 1"
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+      tags: {}
+      variables:
+      - name: "stage2"
+        type: "String"
+        description: ""
+        required: false
+        value: "<+input>"
+  - stage:
+      name: "cs2"
+      identifier: "cs2"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                executionTarget: {}
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "echo 1"
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+      tags: {}
+      variables:
+      - name: "stage3"
+        type: "String"
+        description: ""
+        required: false
+        value: "<+input>"
+  allowStageExecutions: true
+  identifier: "stagestrigger_Clone"
+  name: "stages-trigger - Clone"
