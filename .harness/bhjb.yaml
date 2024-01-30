@@ -3,3 +3,6 @@ service:
   identifier: bhjb
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec: {}
+    type: Kubernetes
