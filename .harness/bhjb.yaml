@@ -1,0 +1,5 @@
+service:
+  name: bhjb
+  identifier: bhjb
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
