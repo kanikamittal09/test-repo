@@ -1,0 +1,59 @@
+template:
+  name: smallstagetempalte
+  type: Stage
+  projectIdentifier: kanikaTest
+  orgIdentifier: default
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      service:
+        serviceRef: docker2
+        serviceInputs:
+          serviceDefinition:
+            type: Kubernetes
+            spec:
+              artifacts:
+                primary:
+                  type: DockerRegistry
+                  spec:
+                    connectorRef: <+input>
+                    imagePath: <+input>
+                    tag: <+input>
+                    digest: <+input>
+      environment:
+        environmentRef: Env2
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: infra2
+            inputs:
+              identifier: infra2
+              type: KubernetesDirect
+              spec:
+                connectorRef: <+input>
+                namespace: <+input>
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: sfdsdg
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
+  identifier: smallstagetempalte
+  versionLabel: v1
