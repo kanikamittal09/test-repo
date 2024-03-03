@@ -1,0 +1,38 @@
+template:
+  name: pipeline4
+  identifier: pipeline4
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: dda
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: dfds
+          identifier: dfds
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - stepGroup:
+                    name: stepgrouppname
+                    identifier: stepgrouppname
+                    template:
+                      templateRef: stepgroup3
+                      versionLabel: v1
+                      gitBranch: kanikamittal09-patch-3
+                      templateInputs:
+                        steps:
+                          - step:
+                              identifier: s3
+                              template:
+                                templateInputs:
+                                  type: ShellScript
+                                  spec:
+                                    executionTarget:
+                                      host: <+input>
+                                      connectorRef: <+input>
+                                      workingDirectory: <+input>
+          tags: {}
