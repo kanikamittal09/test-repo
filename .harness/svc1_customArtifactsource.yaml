@@ -1,0 +1,5 @@
+service:
+  name: svc1_customArtifactsource
+  identifier: svc1_customArtifactsource
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
