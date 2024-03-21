@@ -3,3 +3,19 @@ service:
   identifier: svc1_customArtifactsource
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: artifact1
+              identifier: artifact1
+              template:
+                templateRef: testCustomArtifactSource
+                versionLabel: "1"
+                templateInputs:
+                  type: CustomArtifact
+                  spec:
+                    version: <+input>
+    type: Kubernetes
