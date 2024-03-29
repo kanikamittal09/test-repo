@@ -6,56 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: stg2
-        identifier: stg2
-        description: ""
-        type: Deployment
-        spec:
-          deploymentType: Kubernetes
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: <+input>
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-            rollbackSteps: []
-          service:
-            serviceRef: svc1_customArtifactsource
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
-            gitBranch: main-patch-1
-          environment:
-            environmentRef: <+input>
-            deployToAll: false
-            environmentInputs: <+input>
-            serviceOverrideInputs: <+input>
-            infrastructureDefinitions: <+input>
-        tags: {}
-        failureStrategies:
-          - onFailure:
-              errors:
-                - AllErrors
-              action:
-                type: StageRollback
-    - stage:
-        name: stg3
-        identifier: stg3
+        name: diffrepo_defaultbranch
+        identifier: diffrepo_defaultbranch
         description: ""
         type: Deployment
         spec:
