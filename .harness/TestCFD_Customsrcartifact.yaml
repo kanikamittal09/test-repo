@@ -115,8 +115,12 @@ pipeline:
                 spec:
                   artifacts:
                     primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
+                      primaryArtifactRef: artifact2
+                      sources:
+                        - identifier: artifact2
+                          type: DockerRegistry
+                          spec:
+                            tag: <+input>
             gitBranch: new
           environment:
             environmentRef: <+input>
