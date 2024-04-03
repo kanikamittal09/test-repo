@@ -24,4 +24,13 @@ service:
                           script: "curl -X GET \"https://nexus3.dev.harness.io/service/rest/v1/components?repository=cdp-qa-automation-1\" -H \"accept: application/json\" > $HARNESS_ARTIFACT_RESULT_PATH"
                         type: Inline
               type: CustomArtifact
+            - name: test2_template
+              identifier: test2_template
+              template:
+                templateRef: testCustomArtifactSource
+                versionLabel: "1"
+                templateInputs:
+                  type: CustomArtifact
+                  spec:
+                    version: <+input>
     type: Kubernetes
