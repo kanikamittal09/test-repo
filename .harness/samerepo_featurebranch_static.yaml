@@ -3,3 +3,19 @@ service:
   identifier: samerepo_featurebranch_static
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: arifacttesting
+              identifier: arifacttesting
+              template:
+                templateRef: testCustomArtifactSource
+                versionLabel: "1"
+                templateInputs:
+                  type: CustomArtifact
+                  spec:
+                    version: <+input>
+    type: Kubernetes
