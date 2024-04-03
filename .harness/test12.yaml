@@ -158,7 +158,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: samerepo_samebranch_feature
+            serviceRef: samrepo_defaultbranch
             serviceInputs:
               serviceDefinition:
                 type: Kubernetes
@@ -167,6 +167,7 @@ pipeline:
                     primary:
                       primaryArtifactRef: <+input>
                       sources: <+input>
+            gitBranch: main
           environment:
             environmentRef: <+input>
             deployToAll: false
