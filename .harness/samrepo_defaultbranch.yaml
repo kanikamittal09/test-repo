@@ -1,0 +1,5 @@
+service:
+  name: samrepo_defaultbranch
+  identifier: samrepo_defaultbranch
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
