@@ -1,0 +1,5 @@
+service:
+  name: samerepo_samebranch_svc
+  identifier: samerepo_samebranch_svc
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
