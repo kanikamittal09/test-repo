@@ -3,3 +3,19 @@ service:
   identifier: samrepo_defaultbranch
   orgIdentifier: default
   projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: dsrrtderswea
+              identifier: dsrrtderswea
+              template:
+                templateRef: testCustomArtifactSource
+                versionLabel: "1"
+                templateInputs:
+                  type: CustomArtifact
+                  spec:
+                    version: <+input>
+    type: Kubernetes
