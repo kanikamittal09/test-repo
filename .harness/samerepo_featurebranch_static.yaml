@@ -1,0 +1,5 @@
+service:
+  name: samerepo_featurebranch_static
+  identifier: samerepo_featurebranch_static
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
