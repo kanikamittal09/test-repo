@@ -1,7 +1,8 @@
 environment:
   name: testenv
   identifier: testenv
-  accountId: rXUXvbFqRr2XwcjBu3Oq-Q
+  tags:
+    newtag: jgjg
+  type: PreProduction
   orgIdentifier: default
   projectIdentifier: DoNotDelete_kanikaTest
-  type: PreProduction
