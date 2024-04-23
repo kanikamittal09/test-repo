@@ -3,6 +3,6 @@ environment:
   identifier: testenv
   tags:
     newtag: jgjg
-  type: PreProduction
+  type: Production
   orgIdentifier: default
   projectIdentifier: DoNotDelete_kanikaTest
