@@ -1,0 +1,7 @@
+environment:
+  name: testenv
+  identifier: testenv
+  accountId: rXUXvbFqRr2XwcjBu3Oq-Q
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
+  type: PreProduction
