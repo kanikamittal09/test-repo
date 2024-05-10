@@ -13,7 +13,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: repoAfeturebranch
+            serviceRef: repoBmainBranch
             serviceInputs:
               serviceDefinition:
                 type: Kubernetes
@@ -22,7 +22,7 @@ pipeline:
                     primary:
                       primaryArtifactRef: <+input>
                       sources: <+input>
-            gitBranch: main_old
+            gitBranch: main
           environment:
             environmentRef: <+input>
             deployToAll: false
