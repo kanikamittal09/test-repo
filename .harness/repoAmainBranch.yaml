@@ -13,15 +13,8 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: repoBmainBranch
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
+            serviceRef: repoBfeatureBranch
+            gitBranch: main-patch
           environment:
             environmentRef: <+input>
             deployToAll: false
