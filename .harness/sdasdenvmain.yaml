@@ -1,6 +1,6 @@
 environment:
-  name: sdasdenvmain
-  identifier: sdasdenvmain
+  name: ""
+  identifier: ""
   orgIdentifier: default
   projectIdentifier: DoNotDelete_kanikaTest
   type: PreProduction
