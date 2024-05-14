@@ -1,0 +1,6 @@
+environment:
+  name: env1
+  identifier: env1
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
+  type: Production
