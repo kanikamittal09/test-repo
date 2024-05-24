@@ -1,0 +1,5 @@
+service:
+  name: remotesvvc
+  identifier: remotesvvc
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: NGPipeAutoDemoProxDF1dwGRXV
