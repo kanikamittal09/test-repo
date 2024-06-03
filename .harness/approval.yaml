@@ -1,0 +1,68 @@
+pipeline:
+  name: approval
+  identifier: approval
+  projectIdentifier: DoNotDelete_kanikaTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: njn
+        identifier: njn
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: klkl
+                  identifier: klkl
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |
+                      Please review the following information and approve the pipeline progression sdfd dsfsgfg sdfsd dsfdf dfgfd dfsdfdf dsfsdgfg
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 2
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account._account_all_users
+                    isAutoRejectEnabled: true
+                    approverInputs:
+                      - name: kjkj
+                        defaultValue: mnm
+                      - name: dfgd
+                        defaultValue: ""
+                      - name: dfgdf
+                        defaultValue: ""
+                      - name: a1
+                        defaultValue: ""
+                      - name: a2
+                        defaultValue: ""
+                      - name: a3
+                        defaultValue: ""
+                      - name: a4
+                        defaultValue: ""
+                      - name: a5
+                        defaultValue: ""
+                      - name: a6
+                        defaultValue: ""
+                      - name: a7
+                        defaultValue: ""
+                      - name: a8
+                        defaultValue: ""
+                      - name: a9
+                        defaultValue: ""
+                      - name: a10
+                        defaultValue: ""
+                      - name: a11
+                        defaultValue: ""
+                      - name: a12
+                        defaultValue: ""
+                    autoApproval:
+                      action: APPROVE
+                      scheduledDeadline:
+                        timeZone: Asia/Calcutta
+                        time: 2024-05-28 01:56 PM
+                      comments: Auto approved by Harness via Harness Approval step
+        tags: {}
