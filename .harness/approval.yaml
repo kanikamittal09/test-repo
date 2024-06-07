@@ -59,10 +59,4 @@ pipeline:
                         defaultValue: ""
                       - name: a12
                         defaultValue: ""
-                    autoApproval:
-                      action: APPROVE
-                      scheduledDeadline:
-                        timeZone: Asia/Calcutta
-                        time: 2024-05-28 01:56 PM
-                      comments: Auto approved by Harness via Harness Approval step
         tags: {}
