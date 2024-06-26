@@ -1,0 +1,6 @@
+overrides:
+  variables:
+    - name: fgfg
+      type: String
+      value: fgf
+      required: false
