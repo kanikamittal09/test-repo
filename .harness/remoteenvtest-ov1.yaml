@@ -1,0 +1,22 @@
+overrides:
+  variables:
+    - name: fdf
+      type: String
+      value: <+input>
+      required: false
+  manifests:
+    - manifest:
+        identifier: jhkg
+        type: Values
+        spec:
+          store:
+            spec:
+              connectorRef: kanikagitconnector
+              gitFetchType: Branch
+              branch: sdfdsfa
+              commitId: null
+              paths:
+                - ytuyut
+              folderPath: null
+              repoName: test-repo
+            type: Github
