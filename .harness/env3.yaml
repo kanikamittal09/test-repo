@@ -1,0 +1,6 @@
+environment:
+  name: env3
+  identifier: env3
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
+  type: PreProduction
