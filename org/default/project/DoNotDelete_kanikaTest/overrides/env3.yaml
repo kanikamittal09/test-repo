@@ -1,0 +1,6 @@
+overrides:
+  variables:
+    - name: wer
+      type: String
+      value: erwer
+      required: false
