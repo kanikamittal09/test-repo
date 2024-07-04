@@ -15,6 +15,6 @@ overrides:
     store:
       spec:
         files:
-          - /avc123223434
+          - /dsd
         secretFiles: null
       type: Harness
