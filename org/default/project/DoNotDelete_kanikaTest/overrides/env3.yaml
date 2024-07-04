@@ -2,5 +2,5 @@ overrides:
   variables:
     - name: wer
       type: String
-      value: erwer12345
+      value: <+input>
       required: false
