@@ -1,0 +1,6 @@
+environment:
+  name: qatestenv
+  identifier: qatestenv
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
+  type: Production
