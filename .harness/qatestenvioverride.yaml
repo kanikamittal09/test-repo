@@ -4,6 +4,13 @@ overrides:
       type: String
       value: sdaf
       required: false
+  applicationSettings:
+    store:
+      spec:
+        files:
+          - /abc23468
+        secretFiles: null
+      type: Harness
   connectionStrings:
     store:
       spec:
