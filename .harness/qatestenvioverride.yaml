@@ -8,7 +8,7 @@ overrides:
     store:
       spec:
         files:
-          - /abc23468
+          - /dere
         secretFiles: null
       type: Harness
   connectionStrings:
