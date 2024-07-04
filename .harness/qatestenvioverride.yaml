@@ -4,3 +4,10 @@ overrides:
       type: String
       value: sdaf
       required: false
+  connectionStrings:
+    store:
+      spec:
+        files:
+          - /avc123223434
+        secretFiles: null
+      type: Harness
