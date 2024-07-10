@@ -4,3 +4,14 @@ overrides:
       type: String
       value: <+input>
       required: false
+  manifests:
+    - manifest:
+        identifier: fgf
+        type: Values
+        spec:
+          store:
+            spec:
+              extractionScript: gfhgf
+              filePath: fgh
+              delegateSelectors: []
+            type: CustomRemote
