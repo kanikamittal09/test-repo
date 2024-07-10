@@ -19,7 +19,7 @@ overrides:
     store:
       spec:
         files:
-          - /fdfgf1237
+          - /lkl90
         secretFiles: null
       type: Harness
   connectionStrings:
