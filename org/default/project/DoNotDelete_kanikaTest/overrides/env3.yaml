@@ -11,7 +11,7 @@ overrides:
         spec:
           store:
             spec:
-              extractionScript: gfhgf
+              extractionScript: gfhgfffdggdg1111
               filePath: fgh
               delegateSelectors: []
             type: CustomRemote
