@@ -15,3 +15,10 @@ overrides:
               filePath: fgh
               delegateSelectors: []
             type: CustomRemote
+  connectionStrings:
+    store:
+      spec:
+        files:
+          - /abc23468
+        secretFiles: null
+      type: Harness
