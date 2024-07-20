@@ -1,0 +1,7 @@
+---
+service:
+  orgIdentifier: "default"
+  projectIdentifier: "DoNotDelete_kanikaTest"
+  identifier: "fdd_Clone123"
+  tags: {}
+  name: "fdd - Clone123"
