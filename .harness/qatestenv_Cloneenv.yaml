@@ -1,0 +1,8 @@
+---
+environment:
+  orgIdentifier: "default"
+  projectIdentifier: "DoNotDelete_kanikaTest"
+  type: "Production"
+  identifier: "qatestenv_Clone"
+  tags: {}
+  name: "qatestenv - Clone"
