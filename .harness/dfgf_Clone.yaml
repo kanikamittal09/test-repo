@@ -1,0 +1,31 @@
+---
+pipeline:
+  projectIdentifier: "DoNotDelete_kanikaTest"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "dfg"
+      identifier: "dfg"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                executionTarget: {}
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "sdfd"
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+      tags: {}
+  identifier: "dfgf_Clone"
+  name: "dfgf - Clone"
