@@ -1,0 +1,8 @@
+---
+service:
+  orgIdentifier: "default"
+  projectIdentifier: "DoNotDelete_kanikaTest"
+  description: ""
+  tags: {}
+  identifier: "cxzc_Clone_Clonesvc"
+  name: "cxzc - Clone - Clonesvc"
