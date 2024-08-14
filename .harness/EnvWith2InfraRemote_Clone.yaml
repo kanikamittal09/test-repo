@@ -1,0 +1,9 @@
+---
+environment:
+  orgIdentifier: "default"
+  description: "one runtime\none with project level conn"
+  type: "Production"
+  tags: {}
+  projectIdentifier: "DoNotDelete_kanikaTest"
+  identifier: "EnvWith2InfraRemote_Clone2"
+  name: "EnvWith2InfraRemote - Clone2"
