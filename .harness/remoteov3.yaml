@@ -1,0 +1,6 @@
+environment:
+  name: remoteov3
+  identifier: remoteov3
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
+  type: Production
