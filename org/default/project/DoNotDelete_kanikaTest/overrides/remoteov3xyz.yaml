@@ -1,0 +1,6 @@
+overrides:
+  variables:
+    - name: xc
+      type: String
+      value: xcv
+      required: false
