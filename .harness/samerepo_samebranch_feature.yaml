@@ -1,0 +1,21 @@
+service:
+  name: samerepo_samebranch_feature
+  identifier: samerepo_samebranch_feature
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: artifactsrc_11
+              identifier: artifactsrc_11
+              template:
+                templateRef: testCustomArtifactSource
+                versionLabel: "1"
+                templateInputs:
+                  type: CustomArtifact
+                  spec:
+                    version: <+input>
+    type: Kubernetes
