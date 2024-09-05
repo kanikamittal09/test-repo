@@ -1,8 +1,7 @@
----
 service:
-  orgIdentifier: "default"
-  projectIdentifier: "DoNotDelete_kanikaTest"
-  description: ""
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
+  description: fgsg
   tags: {}
-  identifier: "xyzclone"
-  name: "xyzclone"
+  identifier: xyzclone
+  name: xyzclone
