@@ -1,0 +1,359 @@
+pipeline:
+  name: testloadFromCache
+  identifier: testloadFromCache
+  projectIdentifier: yuvrajtest1
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stg1
+        identifier: stg1
+        template:
+          templateRef: stg
+          versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+  variables:
+    - name: artifactSource
+      type: String
+      description: Artifact Source
+      value: <+input>
+    - name: buildId
+      type: String
+      value: <+input>
+    - name: imageTag
+      type: String
+      value: <+input>
+    - name: teamProject
+      type: String
+      value: <+input>
+    - name: email
+      type: String
+      description: ""
+      value: <+input>
+    - name: squad
+      type: String
+      value: <+input>
+    - name: azureSql
+      type: String
+      default: "false"
+      value: <+input>
+    - name: tribe
+      type: String
+      value: <+input>
+    - name: product
+      type: String
+      value: <+input>
+    - name: analiseDeRiscoImpacto
+      type: String
+      value: <+input>
+    - name: application
+      type: String
+      value: <+input>
+    - name: area
+      type: String
+      value: <+input>
+    - name: buildIdNumber
+      type: String
+      value: <+input>
+    - name: buildRequestedFor
+      type: String
+      value: <+input>
+    - name: buildRequestedForEmail
+      type: String
+      value: <+input>
+    - name: categoria
+      type: String
+      value: <+input>
+    - name: chartVersion
+      type: String
+      value: <+input>
+    - name: chgNumber
+      type: String
+      value: <+input>
+    - name: cpCodeDev
+      type: String
+      value: <+input>
+    - name: cvDataDogMetricsDev
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvDataDogLogsDev
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvElkDev
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvPrometheusDev
+      type: String
+      default: "true"
+      value: <+input>
+    - name: deployDev
+      type: String
+      default: "false"
+      value: <+input>
+    - name: deployFeatureDev
+      type: String
+      default: "false"
+      value: <+input>
+    - name: deployPrd
+      type: String
+      default: rolling
+      value: <+input>
+    - name: deployTst
+      type: String
+      default: rolling
+      value: <+input>
+    - name: deployStg
+      type: String
+      default: "false"
+      value: <+input>
+    - name: descDetalhadaMudanca
+      type: String
+      value: <+input>
+    - name: duracaoDoPlanoDeRetorno
+      type: String
+      value: <+input>
+    - name: efeitoDeNaoPublicacao
+      type: String
+      value: <+input>
+    - name: fimPlanejado
+      type: String
+      value: <+input>
+    - name: grupoDeAtribuicao
+      type: String
+      value: <+input>
+    - name: impacto
+      type: String
+      value: <+input>
+    - name: incidenteOuProblema
+      type: String
+      value: <+input>
+    - name: indisponibilidade
+      type: String
+      value: <+input>
+    - name: inicioPlanejado
+      type: String
+      value: <+input>
+    - name: itemConfiguracao
+      type: String
+      value: <+input>
+    - name: justificativa
+      type: String
+      value: <+input>
+    - name: loginDeTerceiro
+      type: String
+      value: <+input>
+    - name: monitoramento
+      type: String
+      value: <+input>
+    - name: motivo
+      type: String
+      value: <+input>
+    - name: motivoDeNaoAppDynamicsDatadog
+      type: String
+      value: <+input>
+    - name: natureza
+      type: String
+      value: <+input>
+    - name: planoDeMudanca
+      type: String
+      value: <+input>
+    - name: planoDeRetorno
+      type: String
+      value: <+input>
+    - name: planoDeTeste
+      type: String
+      value: <+input>
+    - name: prioridadeDoIncidenteProblema
+      type: String
+      value: <+input>
+    - name: repoName
+      type: String
+      value: <+input>
+    - name: risco
+      type: String
+      value: <+input>
+    - name: secrets
+      type: String
+      value: <+input>
+    - name: testDev
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testEssentialsDev
+      type: String
+      value: <+input>
+    - name: testImagesDev
+      type: String
+      value: <+input>
+    - name: testNamesDev
+      type: String
+      value: <+input>
+    - name: tipoDeMudanca
+      type: String
+      value: <+input>
+    - name: tituloDaMudanca
+      type: String
+      value: <+input>
+    - name: uriAnexo
+      type: String
+      value: <+input>
+    - name: utilizaAppDynamicsDatadog
+      type: String
+      value: <+input>
+    - name: canaryInstancePercent
+      type: String
+      value: <+input>
+    - name: verificationDev
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cpCodeTst
+      type: String
+      value: <+input>
+    - name: cvDataDogMetricsTst
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvDataDogLogsTst
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvElkTst
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvPrometheusTst
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testTst
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testEssentialsTst
+      type: String
+      value: <+input>
+    - name: testImagesTst
+      type: String
+      value: <+input>
+    - name: testNamesTst
+      type: String
+      value: <+input>
+    - name: verificationTst
+      type: String
+      default: "true"
+      value: <+input>
+    - name: doPullRequest
+      type: String
+      default: "false"
+      value: <+input>
+    - name: prBranchDestination
+      type: String
+      value: <+input>
+    - name: prBranchMergeStrategy
+      type: String
+      value: <+input>
+    - name: prBranchRemoveOrigin
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cpCodeStg
+      type: String
+      value: <+input>
+    - name: cvDataDogMetricsStg
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvDataDogLogsStg
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvElkStg
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvPrometheusStg
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testStg
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testEssentialsStg
+      type: String
+      value: <+input>
+    - name: testImagesStg
+      type: String
+      value: <+input>
+    - name: testNamesStg
+      type: String
+      value: <+input>
+    - name: verificationStg
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cpCodePrd
+      type: String
+      value: <+input>
+    - name: cvDataDogMetricsPrd
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvDataDogLogsPrd
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvElkPrd
+      type: String
+      default: "true"
+      value: <+input>
+    - name: cvPrometheusPrd
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testPrd
+      type: String
+      default: "true"
+      value: <+input>
+    - name: testEssentialsPrd
+      type: String
+      value: <+input>
+    - name: testImagesPrd
+      type: String
+      value: <+input>
+    - name: testNamesPrd
+      type: String
+      value: <+input>
+    - name: verificationPrd
+      type: String
+      default: "true"
+      value: <+input>
+    - name: podePublicar
+      type: String
+      default: "true"
+      value: <+input>
+    - name: bypass
+      type: String
+      default: "false"
+      description: Bypass production deployment - Precisa que um dos times  techproducts ou SREs aprovem o bypass
+      value: <+input>.allowedValues(true,false)
+    - name: shortCommit
+      type: String
+      value: <+input>
+    - name: templateVersion
+      type: String
+      value: <+input>
