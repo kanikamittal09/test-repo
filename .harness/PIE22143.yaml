@@ -13,7 +13,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: fgdfgPIP22143
+            serviceRef: fgdfgPIP22143_Clone
             serviceInputs:
               serviceDefinition:
                 type: Kubernetes
@@ -22,7 +22,7 @@ pipeline:
                     primary:
                       primaryArtifactRef: <+input>
                       sources: <+input>
-            gitBranch: main-patch
+            gitBranch: newbranch
           environment:
             environmentRef: <+input>
             deployToAll: false
