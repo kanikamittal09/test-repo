@@ -53,3 +53,28 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+    - stage:
+        name: template
+        identifier: template
+        tags: {}
+        template:
+          templateRef: jjPIP
+          versionLabel: kjk
+          gitBranch: main-patch-bb-patch
+          templateInputs:
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: <+input>
+                          sources: <+input>
