@@ -14,7 +14,7 @@ service:
                 tag: <+input>
                 digest: ""
                 region: <+input>
-              identifier: ecr
+              identifier: ecr1
               type: Ecr
   gitOpsEnabled: false
   orgIdentifier: default
