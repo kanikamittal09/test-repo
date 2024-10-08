@@ -1,0 +1,21 @@
+service:
+  name: fgdfgPIP22143
+  identifier: fgdfgPIP22143
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: account.CDCNGAuto_Awsbh7RbXBnhL
+                imagePath: <+input>
+                tag: <+input>
+                digest: ""
+                region: <+input>
+              identifier: ecr
+              type: Ecr
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_kanikaTest
