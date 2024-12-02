@@ -1,0 +1,6 @@
+environment:
+  name: remoteenvpxacc
+  identifier: remoteenvpxacc
+  orgIdentifier: default
+  projectIdentifier: KanikaTest
+  type: Production
