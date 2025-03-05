@@ -21,4 +21,4 @@ pipeline:
                 values: <+input>
                 metadata:
                   parallel: <+input>
-            skipInstances: <+input>
+            skipInstances: true
