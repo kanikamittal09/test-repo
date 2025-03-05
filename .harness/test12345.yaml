@@ -1,0 +1,24 @@
+pipeline:
+  name: test12345
+  identifier: test12345
+  projectIdentifier: DoNotDelete_kanikaTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: jjjkkk
+        identifier: jjjkkk
+        tags: {}
+        template:
+          templateRef: vghjjcfd
+          versionLabel: cfd
+          templateInputs:
+            type: Deployment
+            spec:
+              environments:
+                values: <+input>
+              services:
+                values: <+input>
+                metadata:
+                  parallel: <+input>
+            skipInstances: <+input>
