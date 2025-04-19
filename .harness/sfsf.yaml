@@ -1,0 +1,19 @@
+service:
+  name: sfsf
+  identifier: sfsf
+  orgIdentifier: default
+  projectIdentifier: kanikaTest
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: docker
+                imagePath: library/nginx
+                tag: <+input>
+                digest: ""
+              identifier: artifact2
+              type: DockerRegistry
+    type: Kubernetes
